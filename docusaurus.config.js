@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const fs = require("fs");
+const path = require("path");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -35,14 +37,27 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: 'blog',
           sidebarPath: require.resolve('./sidebars.js')
-
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
+  ],
+
+  plugins: [
+    //  Copy the Cloudflare pages redirects file to the build dir
+    () => ({
+      name: "copy-redirects",
+      async postBuild({ outDir }) {
+        fs.copyFileSync(
+          path.resolve(__dirname, "_redirects"),
+          path.resolve(outDir, "_redirects")
+        );
+      },
+    }),
   ],
 
   themeConfig:

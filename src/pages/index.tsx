@@ -7,6 +7,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout>
       <main>
+        <p>This is supposed to redirect <a href='/blog'>here</a>.</p>
       </main>
     </Layout>
   );
