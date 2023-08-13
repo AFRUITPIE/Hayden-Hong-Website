@@ -10,7 +10,7 @@ const path = require("path");
 const config = {
   title: "Hayden Hong",
   tagline: "Hayden Hong's portfolio webpage ",
-  favicon: "img/favicon.svg",
+  favicon: "img/logo.svg",
 
   // Set the production url of your site here
   url: "https://haydenhong.com",
