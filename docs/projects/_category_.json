@@ -1,8 +1,8 @@
 {
-  "label": "Miscellaneous",
-  "position": 4,
+  "label": "Projects",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Small, potentially goofy projects."
+    "description": "The projects I've done outside of my work."
   }
 }

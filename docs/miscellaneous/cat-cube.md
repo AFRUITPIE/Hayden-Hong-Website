@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: A pure css rotating cube
 ---
 
 # Rotating Cat Cube
