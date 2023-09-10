@@ -6,6 +6,9 @@ Hayden Hong's website, built using [Docusaurus](https://docusaurus.io/) and host
 
 ## Dev Environment Setup ⌨️
 
+> [!NOTE]
+> This repo uses [Bun](https://bun.sh), but all `bun` commands below should be interchangeable with `npm`.
+
 ### Containerized Dev Environment 📦
 
 > [!NOTE]
@@ -26,7 +29,7 @@ npm install
 This command starts a local development server and opens up a browser window:
 
 ```shell
-npm start
+bun run start
 ```
 
 ### Build 🛠️
@@ -34,7 +37,7 @@ npm start
 This command creates a Production-Ready™ build:
 
 ```shell
-npm build
+bun run build
 ```
 
 I have this configured in [Cloudflare Pages](https://pages.cloudflare.com) for hosting my personal website. The same command works with most other popular static hosting solutions.
