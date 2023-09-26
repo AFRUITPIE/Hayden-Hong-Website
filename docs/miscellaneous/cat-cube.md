@@ -11,7 +11,7 @@ This blog post contains adapted code from David DeSandro's excellent [Intro to C
 
 # The CSS animation
 
-Here is my beloved cat, Mary, rotating around (thanks to Seattle's [Alley Cat Project](https://alleycatproject.org) for helping me find her ♥️):
+Here is my beloved cat, Mary, rotating around (thanks to Seattle's [Alley Cat Project](https://alleycatproject.org) for helping me find her ♥️)
 
 <html>
     <link rel="stylesheet" href="/css/cat.css" />
