@@ -2,17 +2,18 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>Hayden Hong</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/AFRUITPIE/Hayden-Hong-Website-Nextra',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/AFRUITPIE/Hayden-Hong-Website-Nextra',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Hayden Hong',
   },
+  search: {
+    placeholder: "Search"
+  },
+  faviconGlyph: "🥸"
 }
 
 export default config

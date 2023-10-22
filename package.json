@@ -1,22 +1,15 @@
 {
-  "name": "nextra-docs-template",
+  "name": "hayden-hong-website-nextra",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Hayden Hong's Personal Website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
-  },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Hayden Hong <hello@haydenhong.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
-  },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://haydenhong.com",
   "dependencies": {
     "next": "^13.0.6",
     "nextra": "latest",
