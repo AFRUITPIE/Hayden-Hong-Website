@@ -8,10 +8,18 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/AFRUITPIE/Hayden-Hong-Website-Nextra',
   footer: {
-    text: 'Hayden Hong',
+    text: (
+      <span>
+        MIT {new Date().getFullYear()} © Hayden Hong<br />
+        Made with ♥️ in Seattle
+      </span>
+    )
   },
   search: {
     placeholder: "Search"
+  },
+  feedback: {
+    content: null,
   },
   faviconGlyph: "🥸"
 }
