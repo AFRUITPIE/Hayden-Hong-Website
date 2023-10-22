@@ -1,0 +1,39 @@
+import { Callout } from 'nextra/components'
+import Image from 'next/image'
+
+# Rotating Cat Cube
+
+<Callout type="info">
+  This blog post contains adapted code from David DeSandro's excellent [Intro to CSS 3D transforms](https://3dtransforms.desandro.com) ([License](https://github.com/desandro/3dtransforms#license)). I highly recommend reading it!
+</Callout>
+
+## The CSS animation
+
+Here is my beloved cat, Mary, rotating around (thanks to Seattle's [Alley Cat Project](https://alleycatproject.org) for helping me find her ♥️):
+
+<link rel="stylesheet" href="/css/cat.css" />
+<div className="cube-container">
+    <div className="cube">
+        <div className="face face-front">
+            <Image src="/assets/cat-cube/cat1.png" width={200} height={200} />
+        </div>
+        <div className="face face-right">
+            <Image src="/assets/cat-cube/cat2.png" width={200} height={200} />
+        </div>
+        <div className="face face-left">
+            <Image src="/assets/cat-cube/cat3.png" width={200} height={200} />
+        </div>
+        <div className="face face-top">
+            <Image src="/assets/cat-cube/cat4.png" width={200} height={200} />
+        </div> 
+        <div className="face face-bottom">
+            <Image src="/assets/cat-cube/cat5.png" width={200} height={200} />
+        </div>
+    </div>
+</div>
+
+## Background
+
+While reading Hacker News I found [this post titled "Spinning Diagrams with CSS"](https://news.ycombinator.com/item?id=35646199). Based on the number of points, it seems that most hackers are unaware of the possibility of 3D CSS transformations.
+
+This post interested me because it fits into a running joke within my team. My team's internal documentation is hosted on a framework that doesn't support importing scripts, so we have gone back and forth changing our docs to have goofy CSS-only animations like img slowly expanding or [bouncing like the old DVD logo](https://codepen.io/achristian/pen/WbzgMx). Finding that 3D transformations was possible took our running joke _to the next dimension_.
