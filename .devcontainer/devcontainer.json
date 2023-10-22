@@ -1,0 +1,16 @@
+{
+	"name": "Bun on Debian",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"features": {
+		"ghcr.io/afruitpie/devcontainers-features/bun:latest": {}
+	},
+	"postStartCommand": "bun install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"yzhang.markdown-all-in-one",
+				"unifiedjs.vscode-mdx"
+			]
+		}
+	}
+}
