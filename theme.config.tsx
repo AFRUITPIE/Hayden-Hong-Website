@@ -15,6 +15,11 @@ const config: DocsThemeConfig = {
       </span>
     )
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Hayden Hong'
+    }
+  },
   search: {
     placeholder: "Search"
   },
