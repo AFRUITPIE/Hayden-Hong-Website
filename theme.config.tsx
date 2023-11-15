@@ -26,7 +26,9 @@ const config: DocsThemeConfig = {
   feedback: {
     content: null,
   },
-  faviconGlyph: "🥸"
+  faviconGlyph: "🥸",
+  // Not disabling dark mode, just hiding the button
+  darkMode: false
 }
 
 export default config
