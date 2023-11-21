@@ -4,9 +4,9 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: <span>Hayden Hong</span>,
   project: {
-    link: 'https://github.com/AFRUITPIE/Hayden-Hong-Website-Nextra',
+    link: 'https://github.com/AFRUITPIE/Hayden-Hong-Website',
   },
-  docsRepositoryBase: 'https://github.com/AFRUITPIE/Hayden-Hong-Website-Nextra',
+  docsRepositoryBase: 'https://github.com/AFRUITPIE/Hayden-Hong-Website',
   footer: {
     text: (
       <span>

@@ -1,23 +1,43 @@
-# Nextra Docs Template 
+# Hayden Hong's Website ✨
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+https://haydenhong.com/
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+Hayden Hong's website, built using [Nextra]() and hosted on [Vercel](https://vercel.com/).
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## Dev Environment Setup ⌨️
 
-## Quick Start
+> [!NOTE]
+> This repo uses [Bun](https://bun.sh), but all `bun` commands below should be interchangeable with `npm`.
 
-Click the button to clone this repository and deploy it on Vercel:
+### Containerized Dev Environment 📦
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+> [!NOTE]
+> This repo is integrated with [Dev Containers](https://containers.dev) and [GitHub Codespaces](https://github.com/features/codespaces), so you can containerize and reliably reproduce this environment. Neat!
 
-## Local Development
+If you prefer to manage your own environment (ideally with something like [asdf](https://asdf-vm.com)), the only dependency is [NodeJS](https://nodejs.org/en) version 16 or higher.
 
-First, run `bun install` to install the dependencies.
+### Installation 🚚
 
-Then, run `bun dev` to start the development server and visit localhost:3000.
+Install the npm dependencies (if you're not using a containerized environment):
 
-## License
+```shell
+npm install
+```
 
-This project is licensed under the MIT License.
+### Local Development 🧑‍💻
+
+This command starts a local development server and opens up a browser window:
+
+```shell
+bun run start
+```
+
+### Build 🛠️
+
+This command creates a Production-Ready™ build:
+
+```shell
+bun run build
+```
+
+I have this configured in [Vercel](https://vercel.com/) for hosting my personal website. The same command works with most other popular static hosting solutions.
