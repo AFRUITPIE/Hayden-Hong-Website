@@ -1,34 +1,35 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react";
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   logo: <span>Hayden Hong</span>,
   project: {
-    link: 'https://github.com/AFRUITPIE/Hayden-Hong-Website',
+    link: "https://github.com/AFRUITPIE/Hayden-Hong-Website",
   },
-  docsRepositoryBase: 'https://github.com/AFRUITPIE/Hayden-Hong-Website',
+  docsRepositoryBase: "https://github.com/AFRUITPIE/Hayden-Hong-Website",
   footer: {
     text: (
       <span>
-        MIT {new Date().getFullYear()} © Hayden Hong<br />
+        MIT {new Date().getFullYear()} © Hayden Hong
+        <br />
         Made with ♥️ in Seattle
       </span>
-    )
+    ),
   },
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – Hayden Hong'
-    }
+      titleTemplate: "%s – Hayden Hong",
+    };
   },
   search: {
-    placeholder: "Search"
+    placeholder: "Search",
   },
   feedback: {
     content: null,
   },
   faviconGlyph: "🥸",
   // Not disabling dark mode, just hiding the button
-  darkMode: false
-}
+  darkMode: false,
+};
 
-export default config
+export default config;

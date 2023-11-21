@@ -1,18 +1,18 @@
-import { Callout } from 'nextra/components'
-import { Steps } from 'nextra/components'
+import { Callout } from "nextra/components";
+import { Steps } from "nextra/components";
 
 # Convertify iOS
 
 In college, [Convertify](https://github.com/AFRUITPIE/Convertify) was my first major personal project.
 
-The goal of Convertify was to convert Spotify Playlists to Apple Music and vice versa. 
+The goal of Convertify was to convert Spotify Playlists to Apple Music and vice versa.
 
 It ended up receiving tens of thousands of downloads on the App Store which was exciting, but was ultimately
 shut down due to the effort required to maintain an iOS app.
 
 ## Architecture
 
-Convertify was designed as a local-only system to keep cost at a minimum. 
+Convertify was designed as a local-only system to keep cost at a minimum.
 The $99 Apple Developer fee was already more than I wanted to spend as a college student.
 
 <Steps>
@@ -39,7 +39,7 @@ Repeat this for every track in the source playlist, and we had the track IDs tha
 
 ### Populate destination with tracks
 
-For all the track IDs in the previous step (batched when supported), Convertify would call the destination's API and 
+For all the track IDs in the previous step (batched when supported), Convertify would call the destination's API and
 to append the track.
 
 </Steps>
@@ -78,7 +78,7 @@ The local-only architecture, while cheap, was almost certainly the wrong decisio
 
 ## Struggles I had
 
-Convertify was the first piece of software I made that people actually used. 
+Convertify was the first piece of software I made that people actually used.
 It was a much larger undertaking than I originally expected!
 
 ### So many edge cases
@@ -86,7 +86,7 @@ It was a much larger undertaking than I originally expected!
 Apple Music and Spotify are constantly in an arms race to see who can add the most features, and it consistently
 broke Convertify.
 
-Music videos, podcasts, "radio stations", and more edge cases kept popping up as new features rolled out. 
+Music videos, podcasts, "radio stations", and more edge cases kept popping up as new features rolled out.
 
 It was like playing whack-a-mole but instead of moles I was wacking new bugs that came up with Spotify added
 grocery shopping functionality.
@@ -98,12 +98,12 @@ New revisions have a lengthy review process, and each review requires a lot of w
 
 ### API abstraction
 
-Rather than using a slick library like [Moya](https://github.com/Moya/Moya) to wrap the Apple Music and Spotify APIs, I spread the 
+Rather than using a slick library like [Moya](https://github.com/Moya/Moya) to wrap the Apple Music and Spotify APIs, I spread the
 networking layer around the codebase. This was simply because I didn't know any better at the time. _Oops._
 
 ## What if I built it today?
 
-If I built Convertify today, I would make use of an workflow orchestration system like 
+If I built Convertify today, I would make use of an workflow orchestration system like
 [Logic Apps in Azure](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview) or [Step Functions in AWS](https://aws.amazon.com/step-functions/).
 
 That way I could:

@@ -1,10 +1,13 @@
-import { Callout } from 'nextra/components'
-import Image from 'next/image'
+import { Callout } from "nextra/components";
+import Image from "next/image";
 
 # Rotating Cat Cube
 
 <Callout type="info">
-  This blog post contains adapted code from David DeSandro's excellent [Intro to CSS 3D transforms](https://3dtransforms.desandro.com) ([License](https://github.com/desandro/3dtransforms#license)). I highly recommend reading it!
+  This blog post contains adapted code from David DeSandro's excellent [Intro to
+  CSS 3D transforms](https://3dtransforms.desandro.com)
+  ([License](https://github.com/desandro/3dtransforms#license)). I highly
+  recommend reading it!
 </Callout>
 
 ## The CSS animation
@@ -13,23 +16,23 @@ Here is my beloved cat, Mary, rotating around (thanks to Seattle's [Alley Cat Pr
 
 <link rel="stylesheet" href="/css/cat.css" />
 <div className="cube-container">
-    <div className="cube">
-        <div className="face face-front">
-            <Image src="/assets/cat-cube/cat1.png" width={200} height={200} />
-        </div>
-        <div className="face face-right">
-            <Image src="/assets/cat-cube/cat2.png" width={200} height={200} />
-        </div>
-        <div className="face face-left">
-            <Image src="/assets/cat-cube/cat3.png" width={200} height={200} />
-        </div>
-        <div className="face face-top">
-            <Image src="/assets/cat-cube/cat4.png" width={200} height={200} />
-        </div> 
-        <div className="face face-bottom">
-            <Image src="/assets/cat-cube/cat5.png" width={200} height={200} />
-        </div>
+  <div className="cube">
+    <div className="face face-front">
+      <Image src="/assets/cat-cube/cat1.png" width={200} height={200} />
     </div>
+    <div className="face face-right">
+      <Image src="/assets/cat-cube/cat2.png" width={200} height={200} />
+    </div>
+    <div className="face face-left">
+      <Image src="/assets/cat-cube/cat3.png" width={200} height={200} />
+    </div>
+    <div className="face face-top">
+      <Image src="/assets/cat-cube/cat4.png" width={200} height={200} />
+    </div>
+    <div className="face face-bottom">
+      <Image src="/assets/cat-cube/cat5.png" width={200} height={200} />
+    </div>
+  </div>
 </div>
 
 ## Background

@@ -1,10 +1,11 @@
-import { Callout } from 'nextra/components'
-import Image from 'next/image'
+import { Callout } from "nextra/components";
+import Image from "next/image";
 
 # Personal Website
 
 <Callout type="info">
-  Hilariously, I've decided to refactor my website *again*, so this information is outdated.
+  Hilariously, I've decided to refactor my website *again*, so this information
+  is outdated.
 </Callout>
 
 ## Framework Choices
@@ -42,7 +43,12 @@ Webpages that don't support both a light and dark mode are just plain awful. Nob
 
 Some webpages have implemented an obnoxious toggle between light and dark mode, like _the Docusaurus docs:_
 
-<Image src="/assets/appearance-toggle.png" alt="Example of a dark and light more toggle" width={500} height={500} />
+<Image
+  src="/assets/appearance-toggle.png"
+  alt="Example of a dark and light more toggle"
+  width={500}
+  height={500}
+/>
 
 **Stop doing this!** Just use [the `prefers-color-scheme` CSS Media Feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) so my device can automatically tell you what color scheme to use.
 
