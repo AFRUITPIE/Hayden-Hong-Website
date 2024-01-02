@@ -1,5 +1,6 @@
 {
-  "index": "About Me",
+  "index": "Home",
+  "about-me": "About Me",
   "projects": "Projects",
   "favorite-reads": "Favorite Reads",
   "miscellaneous": "Miscellaneous"
