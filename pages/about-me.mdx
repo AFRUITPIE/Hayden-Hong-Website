@@ -1,14 +1,14 @@
-import { Card, Cards } from "nextra/components";
+import { Cards } from "nextra/components";
 import { Briefcase, Contact, GraduationCap } from "lucide-react";
 
 # About Me
 
 <Cards>
-  <Card
+  <Cards.Card
     title="Work Experience"
     icon={<Briefcase />}
     href="/about-me/work-experience"
   />
-  <Card title="Education" icon={<GraduationCap />} href="/about-me/education" />
-  <Card title="Contact" icon={<Contact />} href="/about-me/contact" />
+  <Cards.Card title="Education" icon={<GraduationCap />} href="/about-me/education" />
+  <Cards.Card title="Contact" icon={<Contact />} href="/about-me/contact" />
 </Cards>

@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/AFRUITPIE/Hayden-Hong-Website",
   footer: {
-    text: (
+    content: (
       <span>
         MIT {new Date().getFullYear()} © Hayden Hong
         <br />
@@ -16,11 +16,7 @@ const config: DocsThemeConfig = {
       </span>
     ),
   },
-  useNextSeoProps() {
-    return {
-      titleTemplate: "%s – Hayden Hong",
-    };
-  },
+  head: "%s – Hayden Hong",
   search: {
     placeholder: "Search",
   },

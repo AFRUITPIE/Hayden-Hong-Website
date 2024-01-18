@@ -1,34 +1,24 @@
 {
-  "name": "hayden-hong-website-nextra",
-  "version": "0.0.1",
-  "description": "Hayden Hong's Personal Website",
+  "name": "hayden-hong-website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "prepare": "husky install"
-  },
-  "author": "Hayden Hong <hello@haydenhong.com>",
-  "license": "MIT",
-  "homepage": "https://haydenhong.com",
-  "dependencies": {
-    "@vercel/analytics": "^1.1.1",
-    "@vercel/speed-insights": "^1.0.2",
-    "lucide-react": "^0.288.0",
-    "next": "^13.0.6",
-    "nextra": "latest",
-    "nextra-theme-docs": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "start": "next start"
   },
   "devDependencies": {
-    "@types/node": "18.11.10",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0",
-    "typescript": "^4.9.3"
+    "@types/bun": "latest"
   },
-  "lint-staged": {
-    "*": "prettier --write --ignore-unknown"
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.4",
+    "lucide-react": "^0.312.0",
+    "next": "^14.0.4",
+    "nextra": "alpha",
+    "nextra-theme-docs": "alpha",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
