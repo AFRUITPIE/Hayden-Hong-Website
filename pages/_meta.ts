@@ -3,5 +3,11 @@ export default {
   "about-me": "About Me",
   "projects": "Projects",
   "favorite-reads": "Favorite Reads",
-  "miscellaneous": "Miscellaneous"
+  "miscellaneous": "Miscellaneous",
+  "contact": {
+    "title": "Contact",
+    "type": "page",
+    "href": "/about-me/contact",
+    "newWindow": false
+  }
 }

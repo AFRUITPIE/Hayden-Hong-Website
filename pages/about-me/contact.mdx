@@ -1,1 +1,22 @@
-# Contact
+import { Callout, Cards } from "nextra/components";
+import { Linkedin, Mail, Github } from "lucide-react";
+
+# Contact Me
+
+<Callout type="info" emoji="🌎">
+I can only understand English, apologies for ignoring messages in other languages.
+</Callout>
+
+Want to reach out to me? Send me an email at hello@haydenhong.com and we can start chatting.
+
+Here are other ways you can contact me or follow me:
+
+<Cards>
+  <Cards.Card
+    title="Email"
+    icon={<Mail />}
+    href="mailto:hello@haydenhong.com"
+  />
+  <Cards.Card title="LinkedIn" icon={<Linkedin />} href="https://www.linkedin.com/in/hayden-hong-software/" />
+  <Cards.Card title="GitHub" icon={<Github />} href="https://github.com/AFRUITPIE" />
+</Cards>
