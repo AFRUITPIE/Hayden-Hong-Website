@@ -1,8 +1,17 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const config: DocsThemeConfig = {
-  logo: <span>Hayden Hong</span>,
+  logo: (
+    <span className="mr-6 flex items-center space-x-2">
+      <Avatar>
+        <AvatarImage src="/assets/Hayden.jpeg" alt="Hayden" />
+        <AvatarFallback>HH</AvatarFallback>
+      </Avatar>
+      <span className="font-bold">Hayden Hong</span>
+    </span>
+  ),
   project: {
     link: "https://github.com/AFRUITPIE/Hayden-Hong-Website",
   },
