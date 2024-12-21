@@ -31,14 +31,13 @@ const config: DocsThemeConfig = {
     const { frontMatter } = useConfig();
     
     const url = `https://haydenhong.com${asPath}`;
+    const title = frontMatter.title ? `${frontMatter.title} | Hayden Hong` : 'Hayden Hong';
 
     return (
       <>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
-        <meta
-          property="og:title"
-          content={frontMatter.title ? `${frontMatter.title} | Hayden Hong` : 'Hayden Hong'}
-        />
         <meta
           property="og:description"
           content={frontMatter.description || 'Hayden Hong\'s personal website'}
