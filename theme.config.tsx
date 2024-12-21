@@ -1,6 +1,7 @@
 import React from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
   logo: (
@@ -25,7 +26,31 @@ const config: DocsThemeConfig = {
       </span>
     ),
   },
-  head: "%s – Hayden Hong",
+  head() {
+    const { asPath } = useRouter();
+    const { frontMatter } = useConfig();
+    
+    const url = `https://haydenhong.com${asPath}`;
+
+    return (
+      <>
+        <meta property="og:url" content={url} />
+        <meta
+          property="og:title"
+          content={frontMatter.title ? `${frontMatter.title} | Hayden Hong` : 'Hayden Hong'}
+        />
+        <meta
+          property="og:description"
+          content={frontMatter.description || 'Hayden Hong\'s personal website'}
+        />
+        <meta
+          property="og:image"
+          content="https://haydenhong.com/assets/Hayden.jpeg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+      </>
+    );
+  },
   search: {
     placeholder: "Search",
   },
