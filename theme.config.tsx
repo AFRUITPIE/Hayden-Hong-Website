@@ -7,7 +7,7 @@ const config: DocsThemeConfig = {
   logo: (
     <span className="mr-6 flex items-center space-x-2">
       <Avatar>
-        <AvatarImage src="/assets/Hayden.jpeg" alt="Hayden" />
+        <AvatarImage src="/assets/Hayden.jpg" alt="Hayden" />
         <AvatarFallback>HH</AvatarFallback>
       </Avatar>
       <span className="font-bold">Hayden Hong</span>
@@ -44,7 +44,7 @@ const config: DocsThemeConfig = {
         />
         <meta
           property="og:image"
-          content="https://haydenhong.com/assets/Hayden.jpeg"
+          content="https://haydenhong.com/assets/Hayden.jpg"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </>
