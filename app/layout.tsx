@@ -1,7 +1,8 @@
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
-import { useRouter } from 'next/router'
+import Image from 'next/image'
+import hayden from '/public/assets/hayden.jpeg'
 import 'nextra-theme-docs/style.css'
 
 export const metadata = {
@@ -10,10 +11,22 @@ export const metadata = {
 
 const navbar = (
   <Navbar
-    logo={<b>Hayden Hong</b>}
-    projectLink='https://github.com/AFRUITPIE/Hayden-Hong-Website'
+    logo={
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <Image
+          src={hayden} 
+          alt="Picture of Hayden Hong"
+          width={42}
+          height={42}
+          style={{ borderRadius: '50%' }} // Makes the image round
+        />
+        <b>Hayden Hong</b>
+      </div>
+    }
+    projectLink="https://github.com/AFRUITPIE/Hayden-Hong-Website"
   />
 )
+
 const footer = <Footer>
 MIT {new Date().getFullYear()} © Hayden Hong.
 Made with ♥️ in Seattle
