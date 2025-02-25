@@ -4,6 +4,7 @@ import { getPageMap } from 'nextra/page-map'
 import Image from 'next/image'
 import hayden from '/public/assets/hayden.jpeg'
 import 'nextra-theme-docs/style.css'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
@@ -55,6 +56,7 @@ export default async function RootLayout({
         >
           {children}
         </Layout>
+        <Analytics />
       </body>
     </html>
   )
