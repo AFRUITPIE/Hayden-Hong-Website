@@ -12,11 +12,11 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "lucide-react": "^0.475.0",
-    "next": "15.1.6",
-    "nextra": "^4.2.5",
-    "nextra-theme-docs": "^4.2.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^15.2.4",
+    "nextra": "^4.2.17",
+    "nextra-theme-docs": "^4.2.17",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "typescript": "^5",
