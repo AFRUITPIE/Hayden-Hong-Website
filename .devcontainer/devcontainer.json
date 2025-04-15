@@ -1,0 +1,8 @@
+{
+	"name": "Debian",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"features": {
+		"ghcr.io/devcontainer-community/devcontainer-features/bun.sh:1": {}
+	},
+	"postCreateCommand": "bun install"
+}
