@@ -6,9 +6,6 @@ Hayden Hong's website, built using [Nextra]() and hosted on [Vercel](https://ver
 
 ## Dev Environment Setup ⌨️
 
-> [!NOTE]
-> This repo uses [Bun](https://bun.sh), but all `bun` commands below should be interchangeable with `npm`.
-
 ### Containerized Dev Environment 📦
 
 > [!NOTE]
@@ -21,7 +18,7 @@ If you prefer to manage your own environment (ideally with something like [asdf]
 Install the npm dependencies (if you're not using a containerized environment):
 
 ```shell
-npm install
+bun install
 ```
 
 ### Local Development 🧑‍💻
