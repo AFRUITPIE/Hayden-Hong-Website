@@ -3,6 +3,7 @@ import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import Image from 'next/image'
 import hayden from '/public/assets/hayden.jpeg'
+import '@/app/globals.css'
 import 'nextra-theme-docs/style.css'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next';

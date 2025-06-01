@@ -3,53 +3,53 @@ title: Home
 asIndexPage: true
 ---
 
-# Hello!
+import Image from 'next/image'
+import hayden_ski from '/public/assets/home/hayden-ski.jpeg'
+import hayden_bike from '/public/assets/home/hayden-bike.jpeg'
+import hayden_car from '/public/assets/home/hayden-car.jpeg'
 
-I'm Hayden Hong (He, Him) and I am an Software Development Engineer II at Amazon who specializes in designing, implementing, and optimizing scalable backend systems and developer tools. 
+# Hey, I'm Hayden 👋
 
-I have Demonstrated success in enhancing user experiences, improving developer productivity, and mentoring technical teams. 
+I'm a Seattle-based **Software Development Engineer II at Amazon** who loves turning complex, high-volume problems into fast, reliable experiences.
+My days revolve around designing event-driven services, mentoring teammates, and finding clever ways to make both code and customers happier.
 
-My Expertise includes Java, AWS infrastructure, and modern web technologies.
+## Work Experience
 
-## Skills
+### Amazon — Software Development Engineer II
 
-- **Languages & Frameworks:** Java, React, Next.js, SwiftUI
-- **AWS:** Lambda, DynamoDB, ECS, EC2, comprehensive AWS ecosystem
-- **Development Practices:** CI/CD pipelines, automated testing, distributed systems, serverless architecture
+*Seattle, WA • 2022 → present*
 
-## Resume
+- Helped launch Alexa+, using generative and agentic AI for order tracking.
+- Own high-TPS event driven systems that send millions of delivery status notifications daily.
 
+### Amazon — Software Development Engineer I
 
+*Seattle, WA • 2020 → 2022*
 
-<br />
+- Designed and built an async system for managing config approvals across dozens of internal teams.
+- Deployed developer mechanisms to reduce time-to-launch for new features from weeks to hours.
 
-<div
-  style={{
-    width: '100%',
-    /* 500 px tall => width is 500 * (8.5 / 11) ≈ 386 px */
-    maxWidth: '386px',
-    margin: '0 auto',
-    position: 'relative',
-  }}
->
-  {/* This “ratio box” maintains the 8.5×11 aspect ratio */}
-  <div
-    style={{
-      width: '100%',
-      paddingTop: '129.41%', // (11 / 8.5) * 100
-      position: 'relative',
-    }}
-  >
-    <iframe
-      src="/assets/Hayden_Hong_Resume.pdf"
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        border: 'none',
-      }}
-    />
-  </div>
+## Outside Work
+
+Outside of work, I'm learning to ski, I'm getting faster at cycling, and 
+I'm an avid car enthusiast!
+
+<br/>
+
+<div className="flex flex-col gap-4 sm:flex-row">
+<Image
+    src={hayden_ski}
+    alt='Hayden on Skis'
+    className="w-full sm:w-1/3 rounded-lg object-cover"
+  />
+  <Image
+    src={hayden_bike} 
+    alt='Hayden with his bike'
+    className="w-full sm:w-1/3 rounded-lg object-cover"
+  />
+  <Image
+    src={hayden_car} 
+    alt='Hayden with a Renault 5 Turbo'
+    className="w-full sm:w-1/3 rounded-lg object-cover"
+  />
 </div>
