@@ -38,3 +38,13 @@ bun run build
 ```
 
 I have this configured in [Vercel](https://vercel.com/) for hosting my personal website. The same command works with most other popular static hosting solutions.
+
+### Testing 🧪
+
+Run the end-to-end tests with [Playwright](https://playwright.dev):
+
+```shell
+bun run test
+```
+
+The test runner spins up a local development server automatically and exercises core navigation flows.
