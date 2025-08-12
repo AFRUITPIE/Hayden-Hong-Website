@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Roundtrip home to contact back to home', async ({ page }) => {
+test('roundtrip opens homepage, navigates to contact me, navigates back to homepage', async ({ page }) => {
   const response = await page.goto('/');
   expect(response?.status()).toBe(200);
 
