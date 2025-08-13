@@ -1,8 +1,8 @@
-# Hayden Hong's Website ✨
+# Brian Shuryan's Website ✨
 
-https://haydenhong.com/
+https://brianshuryan.com/
 
-Hayden Hong's website, built using [Nextra]() and hosted on [Vercel](https://vercel.com/).
+Brian Shuryan's website, built using [Nextra]() and hosted on [Vercel](https://vercel.com/).
 
 ## Dev Environment Setup ⌨️
 
@@ -48,3 +48,4 @@ bun run test
 ```
 
 The test runner spins up a local development server automatically and exercises core navigation flows.
+

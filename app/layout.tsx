@@ -2,7 +2,7 @@ import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import Image from 'next/image'
-import hayden from '/public/assets/hayden.jpeg'
+import brian from '/public/assets/brian.jpeg'
 import '@/app/globals.css'
 import 'nextra-theme-docs/style.css'
 import { Analytics } from '@vercel/analytics/next'
@@ -17,21 +17,21 @@ const navbar = (
     logo={
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <Image
-          src={hayden} 
-          alt="Picture of Hayden Hong"
+          src={brian}
+          alt="Picture of Brian Shuryan"
           width={42}
           height={42}
           style={{ borderRadius: '50%' }} // Makes the image round
         />
-        <b>Hayden Hong</b>
+        <b>Brian Shuryan</b>
       </div>
     }
-    projectLink="https://github.com/AFRUITPIE/Hayden-Hong-Website"
+    projectLink="https://github.com/AFRUITPIE/Brian-Shuryan-Website"
   />
 )
 
 const footer = <Footer>
-MIT {new Date().getFullYear()} © Hayden Hong.
+MIT {new Date().getFullYear()} © Brian Shuryan.
 Made with ♥️ in Seattle
 </Footer>
 
@@ -64,3 +64,4 @@ export default async function RootLayout({
     </html>
   )
 }
+
