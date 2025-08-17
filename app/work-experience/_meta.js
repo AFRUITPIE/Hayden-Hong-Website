@@ -1,4 +1,6 @@
-export default {
-    'amazon': 'Amazon',
-    'accolade': 'Accolade'
-}
+const meta = {
+  amazon: "Amazon",
+  accolade: "Accolade",
+};
+
+export default meta;
