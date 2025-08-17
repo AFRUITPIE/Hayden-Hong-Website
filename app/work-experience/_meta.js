@@ -1,4 +1,4 @@
 export default {
-    'amazon': 'Amazon',
-    'accolade': 'Accolade'
-}
+  amazon: "Amazon",
+  accolade: "Accolade",
+};
