@@ -1,5 +1,5 @@
 import { Footer, Layout, Navbar } from "nextra-theme-docs";
-import { Head } from "nextra/components";
+import { Head, Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import Image from "next/image";
 import hayden from "/public/assets/hayden.jpeg";
@@ -50,6 +50,7 @@ export default async function RootLayout({
           pageMap={await getPageMap()}
           footer={footer}
           feedback={{ content: null }}
+          search={<Search placeholder="Search" />}
         >
           {children}
           <SpeedInsights />
