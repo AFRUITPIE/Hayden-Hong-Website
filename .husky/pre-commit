@@ -1,1 +1,3 @@
 bun run precommit
+bunx lint-staged
+bunx lint-staged

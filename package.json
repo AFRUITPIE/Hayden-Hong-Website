@@ -1,52 +1,36 @@
 {
-  "name": "hayden-hong-website",
-  "version": "0.1.0",
+  "name": "hayden-hong website",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
+    "dev": "next dev",
     "start": "next start",
-    "lint": "next lint --fix",
-    "test": "playwright test",
-    "prepare": "husky",
-    "format": "prettier --write .",
-    "precommit": "lint-staged"
+    "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
+    "postinstall": "fumadocs-mdx",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.14",
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
-    "lucide-react": "^0.544.0",
-    "next": "^15.5.2",
-    "nextra": "^4.6.0",
-    "nextra-theme-docs": "^4.6.0",
-    "postcss": "^8.5.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.13"
+    "fumadocs-core": "16.3.2",
+    "fumadocs-mdx": "14.2.2",
+    "fumadocs-ui": "16.3.2",
+    "lucide-react": "^0.561.0",
+    "next": "16.0.10",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@playwright/test": "^1.49.0",
-    "@types/node": "^24",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.4",
-    "eslint-config-prettier": "^10.1.8",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.0",
-    "pagefind": "^1.4.0",
-    "prettier": "3.6.2",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^24.10.2",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "**/*": [
-      "prettier --write --ignore-unknown"
-    ],
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
+    "*.{js,css,md}": "prettier --write"
   }
 }
