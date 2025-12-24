@@ -2,7 +2,7 @@
 
 https://haydenhong.com/
 
-Hayden Hong's website, built using [Nextra]() and hosted on [Vercel](https://vercel.com/).
+Hayden Hong's website, built using [Fumadocs](https://www.fumadocs.dev) and hosted on [Vercel](https://vercel.com/).
 
 ## Dev Environment Setup ⌨️
 
