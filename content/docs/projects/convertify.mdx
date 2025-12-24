@@ -49,7 +49,8 @@ The $99 Apple Developer fee was already more than I wanted to spend as a college
   </Step>
 </Steps>
 
-```mermaid
+<Mermaid
+  chart={`
 sequenceDiagram
     participant iPhone
     participant Apple Music
@@ -63,7 +64,8 @@ sequenceDiagram
         iPhone->>+Spotify: Add Track ID to Playlist
         Spotify-->>-iPhone: Return success
     end
-```
+`}
+/>
 
 ### Benefits of local-only architecture
 
