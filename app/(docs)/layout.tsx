@@ -9,8 +9,11 @@ type DocsLayoutProps = {
 
 export default function Layout({ children }: DocsLayoutProps) {
   return (
-    <DocsLayout tree={source.pageTree} {...baseOptions()}
-    themeSwitch={{enabled: false}}
+    <DocsLayout
+      tree={source.pageTree}
+      {...baseOptions()}
+      sidebar={{ defaultOpenLevel: 3 }}
+      themeSwitch={{ enabled: false }}
     >
       {children}
     </DocsLayout>
