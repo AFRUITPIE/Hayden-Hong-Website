@@ -1,0 +1,29 @@
+---
+title: Worldwide Events
+---
+
+In July 2025, I moved to the Worldwide Events org, which orchestrates Amazon's largest retail events — Prime Day, Black Friday, Cyber Monday, and others.
+
+## AI Agent Platform
+
+I joined to help build AI agents that internal teams use to plan for and manage these events. Drawing on my experience building AI-powered experiences in Alexa Shopping, I was able to deliver agents to production quickly and with confidence.
+
+**Evaluation Framework**
+
+One of my first contributions was advocating for and integrating an agent evaluation framework — mirroring what I had built in Alexa Shopping. The framework gives the team ongoing visibility into agent quality, making it possible to catch regressions when prompts or tools change and make confident decisions about what to ship.
+
+**Strands Agents SDK Migration**
+
+I led the migration to the [Strands Agents SDK](https://strandsagents.com/) on Amazon Bedrock AgentCore. The previous approach to exposing APIs to agents required significant boilerplate per endpoint; by adopting Strands' `@tool` decorator pattern, I eliminated thousands of lines of scaffolding code and reduced the time to connect an API to an agent from roughly one week to one day.
+
+As part of this migration, I built support for streaming responses from Bedrock.
+
+<Callout>Reduced time to first token from 30 seconds to 2 seconds.</Callout>
+
+**API Design**
+
+I also rethought how our APIs were structured for agent consumption. The original design used large, coarse-grained API calls that frequently caused context overflow or consumed so much of the model's context window that hallucinations increased. I split these into smaller, more granular endpoints so agents could make multiple focused calls and synthesize the results themselves — improving both accuracy and reliability.
+
+**Agent-to-Agent Orchestration**
+
+I've been collaborating with partner teams to explore how our agent framework can connect with theirs, enabling richer agent-to-agent orchestration across the organization. This work is ongoing.

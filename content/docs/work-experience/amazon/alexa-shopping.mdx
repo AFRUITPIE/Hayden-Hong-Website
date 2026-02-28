@@ -1,0 +1,53 @@
+---
+title: Alexa Shopping
+---
+
+From June 2020 to June 2025, I worked in Alexa Shopping, growing from a new-hire SDE I to a tenured SDE II.
+
+## Federated System Configuration
+
+Customer experiences (CXs) are built through close collaboration between multiple teams — one team owns the cart CX, another owns product details, and so on. Customers' multi-turn conversations with Alexa are routed through a central orchestration layer my team owned.
+
+To keep collaborating CXs in sync across multi-turn conversations, I designed and built a federated system configuration layer shared across partner teams. This replaced a brittle code-sharing approach where dependency conflicts cascaded across the org.
+
+**Configuration Approval Workflow**
+
+When a config change entered code review, it was previously up to my team to manually identify which partner teams needed to approve the change — and up to the developer to chase down those approvals one by one. Changes frequently reached production without all necessary sign-offs.
+
+I designed an asynchronous approval system that automatically analyzed a change's dependencies, added the relevant teams to the code review, and blocked the change from reaching production until all required approvals were received.
+
+<Callout>Reduced average time-to-production from 5 days to 1 day.</Callout>
+
+**Command Line Interface**
+
+The initial version of the federated configuration system was web-based. Partner developers consistently gave feedback that they'd prefer to work locally in their IDEs. I advocated for building a CLI, but leadership preferred to invest in the web portal — until AI-assisted development changed the calculus. Developers could only use terminal-based AI tools against their config if they could work with it locally. I made the case, got agreement for an experimental MVP, and built it.
+
+The reception was immediate. Many teams switched to the CLI exclusively, and it became the primary investment going forward.
+
+## Order Tracking on Alexa+
+
+When my team took ownership of the order tracking systems — powering the "where's my Amazon order?" CX and Alexa notifications for shipped and delivered items — we inherited a classic big ball of mud: five services with largely overlapping dependencies that called one another in ways that made the system difficult to reason about. Releasing updates took three to four weeks. Testing was effectively impossible without making real purchases on a real credit card.
+
+**Microsystem Consolidation**
+
+I designed a rearchitecture that decomposed the five services into three focused systems: an asynchronous state machine for notification-driven workflows (shipped/delivered alerts), a synchronous API for on-demand queries ("where's my stuff?"), and a shared query aggregation service used by both. Routing data access through a single aggregation layer eliminated the need for services to share code directly, breaking the dependency tangle that made the original system fragile.
+
+I also designed an order mocking framework that simulated order state transitions on demand — eliminating the need for real purchases during testing.
+
+<Callout>Reduced test cycle time from two days to seconds. Dramatically reduced release complexity.</Callout>
+
+**Generative CX**
+
+The original plan for Alexa+ was to use an LLM to invoke our CX, but leave the CX itself unchanged — which meant continuing to maintain hardcoded conversation paths by hand. I advocated for going further: using Alexa+'s LLM to generate the CX dynamically. I made the case, led the exploration, and saw it through to production.
+
+<Callout>Reduced time to support a new customer experience from roughly two months of development to under a week end-to-end. Meaningfully improved customer satisfaction scores.</Callout>
+
+## AI CX Evaluation Framework
+
+As AI-generated experiences became central to Alexa Shopping, I orchestrated an org-wide evaluation framework for assessing CX quality. When a prompt update was proposed, the system showed teams exactly which CXs improved, which regressed, and by how much — based on test cases supplied by each team. This gave engineers the signal needed to make informed decisions about what to approve.
+
+## Leadership
+
+Throughout my time in Alexa Shopping, I stayed closely involved with what the rest of the team was working on — jumping into problems together, raising developers' ideas to leadership while making sure credit landed with them, and helping the team build work plans with realistic timelines and honest tradeoffs to meet aggressive release targets.
+
+I also made it a priority to translate technical complexity into leadership-appropriate communication — keeping stakeholders informed without drowning them in implementation details.

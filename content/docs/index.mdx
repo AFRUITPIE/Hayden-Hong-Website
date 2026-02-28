@@ -7,36 +7,54 @@ import Image from "next/image";
 import hayden_ski from "@/public/assets/home/hayden-ski.jpeg";
 import hayden_bike from "@/public/assets/home/hayden-bike.jpeg";
 import hayden_car from "@/public/assets/home/hayden-car.jpeg";
+import { Briefcase, FolderOpen, Mail } from "lucide-react";
+import { RandomGreeting } from "@/components/random-greeting";
 
-Hey, I'm Hayden 👋
+## About Me
 
-I'm a Seattle-based **Software Development Engineer II at Amazon** who loves turning complex, high-volume problems into fast, reliable experiences.
-My days revolve around designing event-driven services, mentoring teammates, and finding clever ways to make both code and customers happier.
+<RandomGreeting />, I'm Hayden 👋
+
+I'm a software engineer at Amazon in Seattle, building AI agents that help power some of Amazon's biggest retail events.
+
+<Cards>
+  <Card title="Work Experience" icon={<Briefcase className="size-4" aria-hidden="true" />} href="/work-experience" />
+  <Card title="Projects" icon={<FolderOpen className="size-4" aria-hidden="true" />} href="/projects" />
+  <Card title="Contact Me" icon={<Mail className="size-4" aria-hidden="true" />} href="/contact" />
+</Cards>
 
 ## Outside Work
 
-Outside of work, I'm learning to ski, I'm getting faster at cycling, and
-I'm an avid car enthusiast!
+Outside the office, I'm learning to ski, I love cycling, and I'm a huge car guy.
 
-<br />
+### Skiing
 
-<div className="not-prose flex flex-col gap-4 sm:flex-row">
-  <Image
-    src={hayden_ski}
-    placeholder="blur"
-    alt="Hayden on Skis"
-    className="w-full sm:w-1/3 rounded-lg object-cover"
-  />
-  <Image
-    src={hayden_bike}
-    placeholder="blur"
-    alt="Hayden with his bike"
-    className="w-full sm:w-1/3 rounded-lg object-cover"
-  />
-  <Image
-    src={hayden_car}
-    placeholder="blur"
-    alt="Hayden with a Renault 5 Turbo"
-    className="w-full sm:w-1/3 rounded-lg object-cover"
-  />
-</div>
+I picked up skiing in the 2024/2025 season and I'm already obsessed.
+
+<Image
+  src={hayden_ski}
+  placeholder="blur"
+  alt="Hayden on Skis"
+  className="w-full rounded-lg object-cover"
+/>
+
+### Cycling
+
+In the summer, I'd rather be on my bike than in my car.
+
+<Image
+  src={hayden_bike}
+  placeholder="blur"
+  alt="Hayden with his bike"
+  className="w-full rounded-lg object-cover"
+/>
+
+### Cars
+
+I've loved cars my whole life — weekends are for car shows.
+
+<Image
+  src={hayden_car}
+  placeholder="blur"
+  alt="Hayden with a Renault 5 Turbo"
+  className="w-full rounded-lg object-cover"
+/>

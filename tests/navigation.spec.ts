@@ -22,21 +22,25 @@ test("navigates between core pages from the sidebar", async ({
   await expect(page.getByRole("heading", { level: 1, name: "Home" })).toBeVisible();
 
   const workExperienceToggle = sidebar.getByRole("button", {
-    name: /Work experience/i,
+    name: /Work Experience/i,
   });
   await workExperienceToggle.click();
 
-  const amazonLink = sidebar.getByRole("link", {
-    name: "Amazon - Software Development Engineer II",
-  });
-  await expect(amazonLink).toBeVisible();
+  const amazonToggle = sidebar.getByRole("button", { name: "Amazon" });
+  await expect(amazonToggle).toBeVisible();
+  await amazonToggle.click();
 
-  await amazonLink.click();
-  await expect(page).toHaveURL(/\/work-experience\/amazon$/);
+  const alexaShoppingLink = sidebar.getByRole("link", {
+    name: "Alexa Shopping",
+  });
+  await expect(alexaShoppingLink).toBeVisible();
+
+  await alexaShoppingLink.click();
+  await expect(page).toHaveURL(/\/work-experience\/amazon\/alexa-shopping$/);
   await expect(
     page.getByRole("heading", {
       level: 1,
-      name: "Amazon - Software Development Engineer II",
+      name: "Alexa Shopping",
     }),
   ).toBeVisible();
 });
