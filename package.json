@@ -9,7 +9,7 @@
     "test": "playwright test",
     "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
