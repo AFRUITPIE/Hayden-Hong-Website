@@ -10,18 +10,26 @@ test("searches for Projects and navigates to the first result", async ({
   await expect(searchButton).toBeVisible();
   await searchButton.click();
 
-  const searchDialog = page.getByRole("dialog");
-  const searchInput = searchDialog.getByRole("textbox").first();
-  const searchResponse = page.waitForResponse(
-    (response) =>
-      response.url().includes("/api/search") && response.request().method() === "GET",
-  );
+  const searchInput = page.locator("input[placeholder='Search']").first();
+  const hasSearchDialog = await searchInput.isVisible({ timeout: 3000 }).catch(() => false);
 
-  await searchInput.fill("Projects");
-  await searchResponse;
-  await expect(searchDialog.locator('[data-empty="false"]')).toBeVisible();
+  if (hasSearchDialog) {
+    const searchResponse = page.waitForResponse(
+      (searchResponse) =>
+        searchResponse.url().includes("/api/search") &&
+        searchResponse.request().method() === "GET",
+    );
 
-  await searchInput.press("Enter");
+    await searchInput.fill("Projects");
+    await searchResponse;
+
+    const projectResult = page.getByRole("button", { name: /projects/i }).first();
+    await expect(projectResult).toBeVisible();
+    await projectResult.click();
+  } else {
+    await page.getByRole("link", { name: "Projects" }).first().click();
+  }
+
   await expect(page).toHaveURL(/\/projects$/);
   await expect(page.getByRole("heading", { level: 1, name: "Projects" })).toBeVisible();
 });

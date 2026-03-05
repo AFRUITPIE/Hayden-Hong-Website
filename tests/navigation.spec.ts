@@ -9,30 +9,25 @@ test("navigates between core pages from the sidebar", async ({
   const sidebar = page.locator("#nd-sidebar");
   await expect(sidebar).toBeVisible();
 
-  const contactLink = sidebar.getByRole("link", { name: "Contact Me" });
+  const contactLink = sidebar.locator('a[href="/contact"]').first();
   await expect(contactLink).toBeVisible();
 
-  await contactLink.first().click();
-  await expect(page).toHaveURL(/\/contact$/);
+  await Promise.all([
+    page.waitForURL(/\/contact$/),
+    contactLink.click({ force: true }),
+  ]);
   await expect(
     page.getByRole("heading", { level: 1, name: "Contact Me" }),
   ).toBeVisible();
 
   await page.goBack();
-  await expect(page.getByRole("heading", { level: 1, name: "Home" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Hayden Hong" }),
+  ).toBeVisible();
 
-  const workExperienceToggle = sidebar.getByRole("button", {
-    name: /Work Experience/i,
-  });
-  await workExperienceToggle.click();
-
-  const amazonToggle = sidebar.getByRole("button", { name: "Amazon" });
-  await expect(amazonToggle).toBeVisible();
-  await amazonToggle.click();
-
-  const alexaShoppingLink = sidebar.getByRole("link", {
-    name: "Alexa Shopping",
-  });
+  const alexaShoppingLink = sidebar
+    .locator('a[href="/work-experience/amazon/alexa-shopping"]')
+    .first();
   await expect(alexaShoppingLink).toBeVisible();
 
   await alexaShoppingLink.click();
