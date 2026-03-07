@@ -11,7 +11,7 @@ Hayden Hong's website, built using [Fumadocs](https://www.fumadocs.dev) and host
 > [!NOTE]
 > This repo is integrated with [Dev Containers](https://containers.dev) and [GitHub Codespaces](https://github.com/features/codespaces), so you can containerize and reliably reproduce this environment. Neat!
 
-If you prefer to manage your own environment (ideally with something like [asdf](https://asdf-vm.com)), the only dependency is [NodeJS](https://nodejs.org/en) version 16 or higher.
+If you prefer to manage your own environment, this repo is configured for [mise](https://mise.jdx.dev/) and uses [Bun](https://bun.sh/) as the runtime and package manager.
 
 ### Installation 🚚
 
