@@ -12,10 +12,8 @@ test("navigates between core pages from the sidebar", async ({
   const contactLink = sidebar.locator('a[href="/contact"]').first();
   await expect(contactLink).toBeVisible();
 
-  await Promise.all([
-    page.waitForURL(/\/contact$/),
-    contactLink.click({ force: true }),
-  ]);
+  await contactLink.click();
+  await expect(page).toHaveURL(/\/contact$/);
   await expect(
     page.getByRole("heading", { level: 1, name: "Contact Me" }),
   ).toBeVisible();
