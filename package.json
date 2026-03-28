@@ -14,9 +14,9 @@
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "fumadocs-core": "16.6.12",
-    "fumadocs-mdx": "14.2.10",
-    "fumadocs-ui": "16.7.4",
+    "fumadocs-core": "^16.7.7",
+    "fumadocs-mdx": "^14.2.11",
+    "fumadocs-ui": "^16.7.7",
     "lucide-react": "^0.577.0",
     "mermaid": "^11.13.0",
     "next": "16.2.1",
