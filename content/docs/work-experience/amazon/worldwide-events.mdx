@@ -2,28 +2,28 @@
 title: Worldwide Events
 ---
 
-In July 2025, I moved to the Worldwide Events org, which orchestrates Amazon's largest retail events — Prime Day, Black Friday, Cyber Monday, and others.
+In July 2025, I moved to the Worldwide Events org, which orchestrates Amazon's largest retail events like Prime Day, Black Friday, and Cyber Monday.
 
 ## AI Agent Platform
 
-I joined to help build AI agents that internal teams use to plan for and manage these events. Drawing on my experience building AI-powered experiences in Alexa Shopping, I was able to deliver agents to production quickly and with confidence.
+I joined to help build AI agents that internal teams use to plan and run these events. Having just spent a couple years building AI-powered experiences in Alexa Shopping, I was able to hit the ground running.
 
 **Evaluation Framework**
 
-One of my first contributions was advocating for and integrating an agent evaluation framework — mirroring what I had built in Alexa Shopping. The framework gives the team ongoing visibility into agent quality, making it possible to catch regressions when prompts or tools change and make confident decisions about what to ship.
+One of my first contributions was advocating for and integrating an agent evaluation framework, building on what I'd designed in Alexa Shopping. When someone changes a prompt or updates a tool, the framework shows you what got better and what got worse. Without it, you're flying blind.
 
 **Strands Agents SDK Migration**
 
-I led the migration to the [Strands Agents SDK](https://strandsagents.com/) on Amazon Bedrock AgentCore. The previous approach to exposing APIs to agents required significant boilerplate per endpoint; by adopting Strands' `@tool` decorator pattern, I eliminated thousands of lines of scaffolding code and reduced the time to connect an API to an agent from roughly one week to one day.
+I led the migration to the [Strands Agents SDK](https://strandsagents.com/) on Amazon Bedrock AgentCore. The old way of hooking APIs up to agents involved a ton of boilerplate for every endpoint. Strands' `@tool` decorator pattern let me eliminate thousands of lines of scaffolding code and cut the time to connect an API to an agent from about a week down to a day.
 
-As part of this migration, I built support for streaming responses from Bedrock.
+As part of this, I built support for streaming responses from Bedrock.
 
-<Callout>Reduced time to first token from 30 seconds to 2 seconds.</Callout>
+<Callout>Time to first token went from 30 seconds to 2 seconds.</Callout>
 
 **API Design**
 
-I also rethought how our APIs were structured for agent consumption. The original design used large, coarse-grained API calls that frequently caused context overflow or consumed so much of the model's context window that hallucinations increased. I split these into smaller, more granular endpoints so agents could make multiple focused calls and synthesize the results themselves — improving both accuracy and reliability.
+I also reworked how our APIs were structured for agent consumption. The original design used big, coarse API calls that either overflowed the model's context window or ate so much of it that the model started hallucinating. I split them into smaller, focused endpoints so agents could make several targeted calls and piece the results together. Much more accurate, much more reliable.
 
 **Agent-to-Agent Orchestration**
 
-I've been collaborating with partner teams to explore how our agent framework can connect with theirs, enabling richer agent-to-agent orchestration across the organization. This work is ongoing.
+I've been collaborating with partner teams on connecting our agent framework with theirs, enabling agent-to-agent orchestration across the org. This is still in progress.

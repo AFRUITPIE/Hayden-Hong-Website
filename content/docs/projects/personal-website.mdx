@@ -2,63 +2,34 @@
 title: Personal Website
 ---
 
-import Image from "next/image";
+This is my fourth attempt at a personal website. Every couple years I get the itch to redo it.
 
-<Callout type="info">
-  Hilariously, I've decided to refactor my website *again*, so this information
-  is outdated.
-</Callout>
+## Previous Attempts
 
-## Framework Choices
+[The first attempt](https://github.com/AFRUITPIE/Hayden-Hong-React) was entirely in React, which made writing content painful. It was hosted on AWS S3 and CloudFront, which meant more maintenance than I wanted out of a weekend project.
 
-This is my third attempt at my personal website.
+[The second attempt](https://github.com/AFRUITPIE/Hayden-Hong-Blog-Jekyll) used [Jekyll](https://jekyllrb.com). Being a static site generator, writing content was easy. But Ruby dependencies were a nightmare to set up across machines.
 
-[The first attempt](https://github.com/AFRUITPIE/Hayden-Hong-React) was entirely in React, which made writing content difficult. It was hosted on AWS S3 and Cloudfront, which meant more maintenance than I wanted out of a weekend project.
+The third attempt used [Docusaurus](https://docusaurus.io) and was hosted on [Cloudflare Pages](https://pages.cloudflare.com). Docusaurus was solid, but I wanted something with more flexibility and a better component story.
 
-[My second attempt](https://github.com/AFRUITPIE/Hayden-Hong-Blog-Jekyll) used [Jekyll](https://jekyllrb.com). Jekyll, being a [static site generator](https://en.wikipedia.org/wiki/Static_site_generator), made writing content a breeze. I found that Ruby dependencies were difficult to set up between machines.
+## Current Stack
 
-### Obsidian Publish
+### Next.js + Fumadocs
 
-[Obsidian Publish](https://obsidian.md/publish) was the first solution I looked into because [Obsidian](https://obsidian.md) is such a fantastic piece of software.
+The site is built on [Next.js](https://nextjs.org) with [Fumadocs](https://fumadocs.vercel.app), an MDX-based documentation framework. All the content lives as MDX files in `content/docs/`, and Fumadocs handles the sidebar, search, and page rendering. It gives me the structure of a docs site with the flexibility of a full React app when I need it.
 
-The feature set was perfect, but the price ($8/month at the time of writing) was impossible to justify for a personal webpage.
+### Hosting on Vercel
 
-### Gatsby
+Hosted on [Vercel](https://vercel.com), which is about as zero-maintenance as it gets for a Next.js app. Every push to `main` triggers a deploy, and PRs get preview deployments automatically.
 
-[Gatsby](https://www.gatsbyjs.com) is highly recommended in a lot of threads on Hacker News. Unfortunately, I found Gatsby's docs to be hostile. Every conspicuous button on the Gatsby homepage links to a Netlify resource, Gatsby Cloud product page, or brand testimonial.
+### Testing with Playwright
 
-I'm sure Gatsby is a great framework, but I don't want to sift through ads every time I look at the docs.
+The site has E2E tests written in [Playwright](https://playwright.dev) that run on every push and PR via a [GitHub Actions](https://github.com/features/actions) workflow. Playwright auto-starts a dev server and runs the tests against it. Nothing fancy, but it catches broken pages before they ship.
 
-### Docusaurus (The one I chose)
+### Code Quality
 
-[Docusaurus](https://docusaurus.io) is what I ended up choosing for the third attempt because:
+[Prettier](https://prettier.io) runs automatically on commit through [Husky](https://typicode.github.io/husky/) and lint-staged, so I don't have to think about formatting.
 
-- It allows me to copy-paste the pages I had already written for Jekyll
-- A large community uses it
-- The docs are _excellent_
-- It looks good out-of-the-box
+## Dev Environment
 
-## A note about light and dark color schemes
-
-Webpages that don't support both a light and dark mode are just plain awful. Nobody likes opening a bright white page in the middle of the night and frying their eyes.
-
-Some webpages have implemented an obnoxious toggle between light and dark mode, like _the Docusaurus docs:_
-
-<Image
-  src="/assets/appearance-toggle.png"
-  alt="Example of a dark and light more toggle"
-  width={500}
-  height={500}
-/>
-
-**Stop doing this!** Just use [the `prefers-color-scheme` CSS Media Feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) so my device can automatically tell you what color scheme to use.
-
-[Docusaurus has an option to enable following `prefers-color-scheme`](https://docusaurus.io/docs/api/themes/configuration#color-mode---dark-mode), but disables it by default for some inexplicable reason.
-
-## Hosting on Cloudflare Pages
-
-My personal website is hosted in [Cloudflare Pages](https://pages.cloudflare.com). My reasoning is that Cloudflare is already my domain registrar, so integration with Cloudflare Pages is as easy as possible.
-
-## Development Enviornment
-
-I integrated my repo with [Dev Containers](https://containers.dev) and [GitHub Codespaces](https://github.com/features/codespaces), which brings me a reproducible environment across my dev machines.
+[Mise](https://mise.jdx.dev) manages the [Bun](https://bun.sh) version, so anyone who clones the repo gets the right runtime automatically. The repo also has a [Dev Container](https://containers.dev) config for VS Code and [GitHub Codespaces](https://github.com/features/codespaces), which gives a fully reproducible environment without any local setup.
