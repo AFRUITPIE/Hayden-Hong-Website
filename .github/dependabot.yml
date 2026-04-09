@@ -3,8 +3,12 @@ updates:
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
-      interval: weekly
+      interval: monthly
   - package-ecosystem: "bun"
     directory: "/"
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
