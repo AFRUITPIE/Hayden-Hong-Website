@@ -22,7 +22,7 @@ I designed an automated approval system that analyzed a change's dependencies, a
 
 **Command Line Interface**
 
-The config system started as a web tool. Partner teams kept telling us they wanted to work in their IDEs instead. I advocated for building a CLI, but leadership preferred investing in the web portal until AI coding tools changed the conversation. Developers couldn't use terminal-based AI assistants against their config without local access. I made the case again, got the green light for an MVP, and built it.
+The config system started as a web tool. Partner teams kept telling us they wanted to work in their IDEs instead. I advocated for building a CLI, but leadership preferred investing in the web portal. Then terminal-based AI coding assistants took off, and developers couldn't point them at their config without local access. I made the case again, got the green light for an MVP, and built it.
 
 Teams switched to the CLI almost immediately. It became the primary way people interacted with the system going forward.
 
@@ -36,20 +36,20 @@ I designed a rearchitecture that decomposed the five services into three with cl
 
 I also designed and built an order mocking framework so we could simulate order state transitions without buying real stuff.
 
-<Callout>Test cycles went from two days to seconds. Dramatically reduced release complexity.</Callout>
+<Callout>Test cycles went from two days to seconds.</Callout>
 
 **Generative CX**
 
 The original Alexa+ plan was to use an LLM to invoke our existing experience but leave the experience itself unchanged, meaning we'd still be maintaining hardcoded conversation paths by hand. I advocated for going further and having the LLM generate the experience dynamically. I led the exploration and shipped it to production.
 
-<Callout>Supporting a new customer experience went from roughly two months of dev work to under a week. Meaningfully improved customer satisfaction scores.</Callout>
+<Callout>Supporting a new customer experience went from roughly two months of dev work to under a week. Customer satisfaction scores went up too.</Callout>
 
 ## AI CX Evaluation Framework
 
-As AI-generated experiences became a bigger part of Alexa Shopping, I designed and built an org-wide evaluation framework so teams could actually see what happened when someone changed a prompt. It showed which experiences improved, which regressed, and by how much, based on test cases each team provided. Without this, people were basically shipping prompt changes and hoping for the best.
+As AI-generated experiences became a bigger part of Alexa Shopping, I designed and built an org-wide evaluation framework so teams could actually see what happened when someone changed a prompt. It showed which experiences improved, which regressed, and by how much, based on test cases each team provided. Without this, people were shipping prompt changes and hoping for the best.
 
 ## Leadership
 
 I stayed hands-on with what the rest of the team was working on: pairing on problems, making sure good ideas from other developers got visibility with leadership (with credit going to them, not me), and helping the team build work plans with realistic timelines when we had aggressive deadlines.
 
-I also prioritized translating technical details into something leadership could actually act on without needing to understand every implementation detail.
+I also prioritized translating technical details into something leadership could act on without needing to understand every implementation detail.
