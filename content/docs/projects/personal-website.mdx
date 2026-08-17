@@ -14,9 +14,9 @@ The third attempt used [Docusaurus](https://docusaurus.io) and was hosted on [Cl
 
 ## Current Stack
 
-### Next.js + Fumadocs
+### Next.js + shadcn/ui
 
-The site is built on [Next.js](https://nextjs.org) with [Fumadocs](https://fumadocs.vercel.app), an MDX-based documentation framework. All the content lives as MDX files in `content/docs/`, and Fumadocs handles the sidebar, search, and page rendering. It gives me the structure of a docs site with the flexibility of a full React app when I need it.
+The site is built on [Next.js](https://nextjs.org) with [shadcn/ui](https://ui.shadcn.com) for the components. All the content lives as MDX files in `content/docs/`, compiled by [MDX](https://mdxjs.com) and rendered through a single catch-all route. A small content layer reads those files to build the sidebar, the table of contents, and the search index, so adding a page is just adding a file. The fourth attempt started on Fumadocs, which was great at the docs part but harder to bend once I wanted the site to look like mine rather than like documentation.
 
 ### Hosting on Vercel
 

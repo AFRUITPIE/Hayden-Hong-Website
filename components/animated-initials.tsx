@@ -48,12 +48,7 @@ function HShape({ x, width }: HShapeProps) {
     <>
       <rect x={x} y={0} width={STEM_WIDTH} height={HEIGHT} />
       <rect x={rightStemX} y={0} width={STEM_WIDTH} height={HEIGHT} />
-      <rect
-        x={x}
-        y={crossbarY}
-        width={width}
-        height={CROSSBAR_HEIGHT}
-      />
+      <rect x={x} y={crossbarY} width={width} height={CROSSBAR_HEIGHT} />
     </>
   );
 }
@@ -61,7 +56,7 @@ function HShape({ x, width }: HShapeProps) {
 export function AnimatedInitials() {
   return (
     <AnimatedInitialsBase
-      className="my-6 text-fd-foreground"
+      className="my-6 text-foreground"
       svgClassName="h-auto w-full max-w-[16rem] overflow-visible transition-[filter] duration-200"
     />
   );
@@ -115,11 +110,20 @@ export function AnimatedInitialsBase({
       targetDelta = 0;
       frameId = window.requestAnimationFrame(animate);
     } else {
-      timeoutId = window.setTimeout(() => {
-        targetDelta = clamp((Math.random() * 2 - 1) * MAX_DELTA, -MAX_DELTA, MAX_DELTA);
-        hasAnimatedRef.current = true;
-        frameId = window.requestAnimationFrame(animate);
-      }, hasAnimatedRef.current ? HOVER_EXIT_DELAY_MS : MIN_STEP_MS + Math.random() * STEP_VARIANCE_MS);
+      timeoutId = window.setTimeout(
+        () => {
+          targetDelta = clamp(
+            (Math.random() * 2 - 1) * MAX_DELTA,
+            -MAX_DELTA,
+            MAX_DELTA,
+          );
+          hasAnimatedRef.current = true;
+          frameId = window.requestAnimationFrame(animate);
+        },
+        hasAnimatedRef.current
+          ? HOVER_EXIT_DELAY_MS
+          : MIN_STEP_MS + Math.random() * STEP_VARIANCE_MS,
+      );
     }
 
     return () => {

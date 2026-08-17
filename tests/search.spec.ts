@@ -6,12 +6,14 @@ test("searches for Projects and navigates to the first result", async ({
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
 
-  const searchButton = page.locator("[data-search-full]").first();
+  const searchButton = page.locator('[data-testid="search-trigger"]').first();
   await expect(searchButton).toBeVisible();
   await searchButton.click();
 
   const searchInput = page.locator("input[placeholder='Search']").first();
-  const hasSearchDialog = await searchInput.isVisible({ timeout: 3000 }).catch(() => false);
+  const hasSearchDialog = await searchInput
+    .isVisible({ timeout: 3000 })
+    .catch(() => false);
 
   if (hasSearchDialog) {
     const searchResponse = page.waitForResponse(
@@ -23,7 +25,9 @@ test("searches for Projects and navigates to the first result", async ({
     await searchInput.fill("Projects");
     await searchResponse;
 
-    const projectResult = page.getByRole("button", { name: /projects/i }).first();
+    const projectResult = page
+      .getByRole("option", { name: /projects/i })
+      .first();
     await expect(projectResult).toBeVisible();
     await projectResult.click();
   } else {
@@ -31,5 +35,7 @@ test("searches for Projects and navigates to the first result", async ({
   }
 
   await expect(page).toHaveURL(/\/projects$/);
-  await expect(page.getByRole("heading", { level: 1, name: "Projects" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Projects" }),
+  ).toBeVisible();
 });

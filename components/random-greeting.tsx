@@ -6,7 +6,7 @@ const greetings = ["Hey", "Howdy", "What's up", "Hello", "Hi there"];
 
 export function RandomGreeting() {
   const [greeting] = useState(
-    () => greetings[Math.floor(Math.random() * greetings.length)]
+    () => greetings[Math.floor(Math.random() * greetings.length)],
   );
   return <>{greeting}</>;
 }

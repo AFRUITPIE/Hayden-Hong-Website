@@ -2,7 +2,7 @@
 
 https://haydenhong.com/
 
-Hayden Hong's website, built using [Fumadocs](https://www.fumadocs.dev) and hosted on [Vercel](https://vercel.com/).
+Hayden Hong's website, built with [Next.js](https://nextjs.org) and [shadcn/ui](https://ui.shadcn.com) and hosted on [Vercel](https://vercel.com/).
 
 ## Dev Environment Setup ⌨️
 
@@ -23,10 +23,10 @@ bun install
 
 ### Local Development 🧑‍💻
 
-This command starts a local development server and opens up a browser window:
+This command starts a local development server on [localhost:3000](http://localhost:3000):
 
 ```shell
-bun run start
+bun run dev
 ```
 
 ### Build 🛠️

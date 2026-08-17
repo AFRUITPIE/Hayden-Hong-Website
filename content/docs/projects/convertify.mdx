@@ -2,8 +2,6 @@
 title: Convertify iOS
 ---
 
-import { Step, Steps } from "fumadocs-ui/components/steps";
-
 In college, [Convertify](https://github.com/AFRUITPIE/Convertify) was my first major personal project.
 
 The goal of Convertify was to convert Spotify Playlists to Apple Music and vice versa.
@@ -23,6 +21,7 @@ The $99 Apple Developer fee was already more than I wanted to spend as a college
     For the playlist source, Convertify made an API call to retrieve the tracks.
     Each track from Apple Music or Spotify comes with a unique ID, and those IDs
     don't match between services.
+
   </Step>
   <Step>
     <h3>Search for similar tracks in destination</h3>
@@ -40,12 +39,14 @@ The $99 Apple Developer fee was already more than I wanted to spend as a college
 
     After repeating this for every track in the source playlist, we had the
     track IDs we wanted to add to the destination playlist.
+
   </Step>
   <Step>
     <h3>Populate destination with tracks</h3>
 
     Once all on-destination IDs were collected, Convertify would call the
     destination's API (batched when supported) to append the tracks.
+
   </Step>
 </Steps>
 
@@ -64,6 +65,7 @@ sequenceDiagram
         iPhone->>+Spotify: Add Track ID to Playlist
         Spotify-->>-iPhone: Return success
     end
+
 `}
 />
 

@@ -1,12 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-test("navigates between core pages from the sidebar", async ({
-  page,
-}) => {
+test("navigates between core pages from the sidebar", async ({ page }) => {
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
 
-  const sidebar = page.locator("#nd-sidebar");
+  const sidebar = page.locator('[data-testid="site-sidebar"]');
   await expect(sidebar).toBeVisible();
 
   const contactLink = sidebar.locator('a[href="/contact"]').first();
